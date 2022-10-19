@@ -1,0 +1,6 @@
+[submodule "themes/educenter-hugo/educenter-hugo"]
+	path = themes/educenter-hugo/educenter-hugo
+	url = git@github.com:themefisher/educenter-hugo.git
+[submodule "rets.etsmtl.ca/themes/educenter-hugo"]
+	path = rets.etsmtl.ca/themes/educenter-hugo
+	url = git@github.com:themefisher/educenter-hugo.git
