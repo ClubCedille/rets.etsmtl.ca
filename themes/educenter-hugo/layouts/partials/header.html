@@ -41,22 +41,9 @@
               <a class="nav-link" href="{{ site.BaseURL | absLangURL }}">{{ site.Params.Home }}</a>
             </li>
             {{ range site.Menus.main }}
-            {{ if .HasChildren }}
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-                {{ .Name }}
-              </a>
-              <div class="dropdown-menu">
-                {{ range .Children }}
-                <a class="dropdown-item" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
-                {{ end }}
-              </div>
-            </li>
-            {{ else }}
             <li class="nav-item">
               <a class="nav-link" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
             </li>
-            {{ end }}
             {{ end }}
           </ul>
 
