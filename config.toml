@@ -1,4 +1,4 @@
-baseURL = "https://rets-etsmtl-ca-git-feature-ehp5-navbar-change-cedille.vercel.app/"
+baseURL = "https://rets-etsmtl-ca.vercel.app/"
 title = "RETS"
 theme = "educenter-hugo"
 # post pagination
