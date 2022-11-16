@@ -63,13 +63,6 @@ top_header = true
 enable = true
 preloader = "images/preloader.gif" # use jpg, png, svg or gif format.
 
-# Subscription
-[params.subscription]
-enable = true
-# mailchimp subsciption
-mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
-mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
-
 # google map
 [params.map]
 enable = true
@@ -131,17 +124,17 @@ url = "about/"
 weight = 1
 
 [[Languages.en.menu.main]]
-name = "events"
+name = "Events"
 url = "events/"
 weight = 2
 
 [[Languages.en.menu.main]]
-name = "partners"
+name = "Partners"
 url = "partners/"
 weight = 3
 
 [[Languages.en.menu.main]]
-name = "podcast"
+name = "Podcast"
 url = "podcast/"
 weight = 4
   
@@ -152,10 +145,6 @@ weight = 5
 
 
 # footer menu
-
-[[Languages.en.menu.footer]]
-name = "teacher"
-url = "teacher/"
 
 [[Languages.en.menu.footer]]
 name = "notice"
@@ -196,17 +185,17 @@ url = "about/"
 weight = 1
 
 [[Languages.fr.menu.main]]
-name = "événements"
+name = "Événements"
 url = "events/"
 weight = 2
 
 [[Languages.fr.menu.main]]
-name = "partenaires"
+name = "Partenaires"
 url = "partners/"
 weight = 3
   
 [[Languages.fr.menu.main]]
-name = "podcast"
+name = "Podcast"
 url = "podcast/"
 weight = 4
   
@@ -217,10 +206,6 @@ weight = 5
 
 
 # footer menu
-
-[[Languages.fr.menu.footer]]
-name = "teacher"
-url = "teacher/"
 
 [[Languages.fr.menu.footer]]
 name = "notice"

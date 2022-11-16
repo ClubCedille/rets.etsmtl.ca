@@ -10,8 +10,8 @@
 - id: contact_info
   translation: Contact Info
 
-- id: subscribe_newsletter
-  translation: Subscribe Newsletter
+- id: contact_newsletter
+  translation: We would love to hear your story
 
 - id: subscribe
   translation: Subscribe
@@ -103,8 +103,8 @@
 - id: interest
   translation: SUMMARY OF ACTIVITIES/INTERESTS
 
-- id: our_teachers
-  translation: Our Teachers
+- id: our_team
+  translation: Our Team
 
 - id: download
   translation: Download

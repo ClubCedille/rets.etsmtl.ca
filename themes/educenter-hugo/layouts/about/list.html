@@ -39,30 +39,40 @@
 {{ end }}
 <!-- /funfacts -->
 
-<!-- success story -->
-{{ partial "success-story.html" . }}
-<!-- /success story -->
-
-<!-- teacher -->
-{{ if $data.homepage.blog.enable }}
+<!-- team -->
 <section class="section">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="section-title">{{ i18n "our_teachers" }}</h2>
+        <h2 class="section-title">{{ i18n "our_team" }}</h2>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <!-- teacher -->
-      {{ range first 3 (where site.RegularPages "Type" "teacher")}}
-      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-        {{ .Render "teacher" }}
+    <div class="row">
+      <div class="col-12">
+        <!-- team category list -->
+        <ul class="list-inline text-center filter-controls mb-5">
+          <li class="list-inline-item m-3 text-uppercase active" data-filter="all">{{ i18n "all" }}</li>
+          {{ $categories := slice }}
+          {{ range .Data.Pages }}
+          {{ $categories = $categories | append .Params.Hierarchy }}
+          {{ end }}
+          {{ range ( $categories | uniq ) }}
+          <li class="list-inline-item m-3 text-uppercase" data-filter="{{ . | urlize }}">{{ . | humanize }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    <!-- team list -->
+    <div class="row filtr-container">
+      <!-- team -->
+      {{ range .Data.Pages }}
+      <div data-category="{{ .Params.Hierarchy | urlize }}" class="col-lg-4 col-sm-6 filtr-item">
+        {{ .Render "about" }}
       </div>
       {{ end }}
     </div>
   </div>
 </section>
-{{ end }}
-<!-- /teacher -->
+<!-- /team -->
 
 {{ end }}
