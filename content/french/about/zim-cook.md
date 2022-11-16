@@ -8,7 +8,7 @@ description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
 # team portrait
 image: "images/teachers/teacher-1.jpg"
 # hierarchy
-hierarchy: "Membre fantôme"
+hierarchy: "Membre"
 # role
 role: "Membre"
 # biography
