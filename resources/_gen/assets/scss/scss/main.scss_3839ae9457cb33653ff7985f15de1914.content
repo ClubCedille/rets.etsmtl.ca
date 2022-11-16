@@ -723,13 +723,6 @@ link:focus,
     font-size: 40px; }
 
 /* /events */
-/* teacher */
-.teacher-info {
-  width: 70%;
-  bottom: 0;
-  right: 0; }
-
-/* /teacher */
 /* footer */
 .newsletter {
   background-image: linear-gradient(to right, transparent 50%, #ce2233 50%);

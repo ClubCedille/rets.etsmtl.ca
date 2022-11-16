@@ -1,14 +1,16 @@
 ---
-title: "Devid Luis"
+title: "Duis Rio"
 draft: false
 # page title background image
 bg_image: "images/backgrounds/page-title.jpg"
 # meta description
 description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-# teacher portrait
+# team portrait
 image: "images/teachers/teacher-3.jpg"
-# course
-course: "Humanities"
+# hierarchy
+hierarchy: "Membre"
+# role
+role: "Membre"
 # biography
 bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque accusamus tenetur ea harum delectus ab consequatur excepturi, odit qui in quo quia voluptate nam optio, culpa aspernatur. Error placeat iusto officia voluptas quae."
 # interest
@@ -51,7 +53,7 @@ contact:
     link : "#"
 
 # type
-type: "teacher"
+type: "about"
 ---
 
 ### À propos de moi

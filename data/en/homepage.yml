@@ -121,7 +121,7 @@ funfacts:
   enable : true
   funfact_item:
     # funfact item loop
-    - name : "TEACHERS"
+    - name : "MEMBERS"
       count : "60"
 
     # funfact item loop

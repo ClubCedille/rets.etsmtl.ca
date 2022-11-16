@@ -10,8 +10,8 @@
 - id: contact_info
   translation: Info de contact
 
-- id: subscribe_newsletter
-  translation: Abonnement à l’infolettre
+- id: contact_newsletter
+  translation: Nous avons envie d'entendre votre histoire
 
 - id: subscribe
   translation: S’abonner
@@ -103,8 +103,8 @@
 - id: interest
   translation: RÉSUMÉ DES ACTIVITÉS/INTÉRÊTS
 
-- id: our_teachers
-  translation: Nos enseignants
+- id: our_team
+  translation: Notre équipe
 
 - id: download
   translation: Télécharger
