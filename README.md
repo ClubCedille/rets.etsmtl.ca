@@ -18,3 +18,7 @@ Site web du club RETS utilisant le thème [Educenter-hugo](https://github.com/th
 ## Mettre à jour le contenu
 
 -TODO
+
+### Générer des liens de calendrier (Outlook & Google calendar)
+
+- Visiter le site suivant: https://www.labnol.org/calendar/
