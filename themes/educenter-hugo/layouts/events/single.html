@@ -55,7 +55,12 @@
         </ul>
       </div>
       <div class="col-lg-3 text-lg-right text-left">
-        <a href="{{ .Params.Apply_url | safeURL }}" class="btn btn-primary">{{ i18n "apply_now" }}</a>
+        {{ if .Params.Google_url }}
+          <a href="{{ .Params.Google_url | safeURL }}"><img class="img-fluid" style="width: 70px; height: 70px; object-fit: cover;" src="{{ .Site.Params.LogoGoogle | absURL }}" alt="google-calendar"></a>
+        {{ end }}
+        {{ if .Params.Outlook_url }}
+          <a href="{{ .Params.Outlook_url | safeURL }}"><img class="img-fluid" style="width: 44px; height: 44px; object-fit: cover;" src="{{ .Site.Params.LogoOutlook | absURL }}" alt="outlook-calendar"></a>
+        {{ end }}
       </div>
       <!-- border -->
       <div class="col-12 mt-4 order-4">
@@ -93,26 +98,5 @@
   </div>
 </section>
 <!-- /event single -->
-
-<!-- more event -->
-<section class="section pt-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="section-title">{{ i18n "more_event" }}</h2>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <!-- event -->
-      {{ $related := (where site.RegularPages "Type" "event") | intersect (where site.Pages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) | shuffle | first 3}}
-      {{ range first 3 $related }}
-      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-        {{ .Render "event" }}
-      </div>
-      {{ end }}
-    </div>
-  </div>
-</section>
-<!-- /more event -->
 
 {{ end }}

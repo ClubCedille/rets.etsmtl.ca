@@ -17,7 +17,7 @@
   translation: S’abonner
 
 - id: contact_us
-  translation: Nous joindre
+  translation: Contactez-nous
 
 - id: latest_article
   translation: Dernier article
@@ -30,9 +30,6 @@
 
 - id: see_all
   translation: Tout voir
-
-- id: apply_now
-  translation: Postuler maintenant
 
 - id: posted_by
   translation: Publié par

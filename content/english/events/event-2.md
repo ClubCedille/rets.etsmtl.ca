@@ -11,13 +11,13 @@ bg_image: "images/backgrounds/page-title.jpg"
 # meta description
 description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
 # Event image
-image: "images/events/event-2.jpg"
+image: "images/events/event-1.jpg"
 # location
 location: "Dhanmondi, Dhaka"
 # entry fee
 fee: "From: $699"
-# apply url
-apply_url : "#"
+# book url
+outlook_url: "https://outlook.live.com/calendar/0/deeplink/compose"
 # event speaker
 speaker:
   # speaker loop
@@ -37,11 +37,11 @@ speaker:
 
   # speaker loop
   - name : "Alfred Jin"
-    image : "images/event-speakers/speaker-4.jpg"
+    
     designation : "Teacher"
 
 # type
-type: "event"
+type: "events"
 ---
 
 ### About Event
