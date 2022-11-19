@@ -44,6 +44,8 @@ link = "plugins/google-map/gmap.js"
 [params]
 logoHeader = "images/logoHeader.png"
 logoFooter = "images/logoFooter.png"
+logoGoogle = "images/google-calendar.png"
+logoOutlook = "images/outlook-calendar.png"
 # Meta data
 description = "This is meta description"
 author = "Themefisher"
