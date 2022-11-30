@@ -1,4 +1,4 @@
-baseURL = "https://rets-etsmtl-ca.vercel.app/"
+baseURL = "rets-etsmtl-ca-dev.vercel.app/"
 title = "RETS"
 theme = "educenter-hugo"
 # post pagination
