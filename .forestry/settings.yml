@@ -36,8 +36,6 @@ sections:
   match: "**/*"
   templates:
   - author
-- type: heading
-  label: Course
 - type: directory
   path: exampleSite/content/english/course
   label: Course (en)
