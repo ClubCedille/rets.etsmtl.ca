@@ -6,6 +6,123 @@
   <div class="card-body">
     <!-- location -->
     <p><i class="ti-location-pin text-primary mr-2"></i>{{ .Params.Location | markdownify }}</p>
-    <h4 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+    <h4 class="card-title"><a data-toggle="modal" data-target="#{{ .File.TranslationBaseName }}">{{ .Title }}</a></h4>
+  </div>
+</div>
+
+<!-- event modal single -->
+<div class="modal fade" id="{{ .File.TranslationBaseName }}" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ .Title }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <!-- event image -->
+            <div class="col-12 mb-4">
+              <img style="height: 500px;width: 100%;object-fit: cover;" src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="img-fluid w-100">
+            </div>
+          </div>
+          <!-- event info -->
+          <div class="row align-items-center mb-5">
+            <div class="col-lg-9">
+              <ul class="list-inline">
+                <li class="list-inline-item mr-xl-5 mr-4 mb-3 mb-lg-0">
+                  <div class="d-flex align-items-center">
+                    <i class="ti-location-pin text-primary icon-md mr-2"></i>
+                    <div class="text-left">
+                      <h6 class="mb-0">{{ i18n "location" | upper}}</h6>
+                      <p class="mb-0">{{ .Params.Location | markdownify }}</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-inline-item mr-xl-5 mr-4 mb-3 mb-lg-0">
+                  <div class="d-flex align-items-center">
+                    <i class="ti-calendar text-primary icon-md mr-2"></i>
+                    <div class="text-left">
+                      <h6 class="mb-0">{{ i18n "date" | upper}}</h6>
+                      <p class="mb-0">{{ .Date.Format "02 Jan, 2006"}}</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-inline-item mr-xl-5 mr-4 mb-3 mb-lg-0">
+                  <div class="d-flex align-items-center">
+                    <i class="ti-time text-primary icon-md mr-2"></i>
+                    <div class="text-left">
+                      <h6 class="mb-0">{{ i18n "time" | upper }}</h6>
+                      <p class="mb-0">{{ .Date.Format "15:04 MST"}}</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-inline-item mr-xl-5 mr-4 mb-3 mb-lg-0">
+                  <div class="d-flex align-items-center">
+                    <i class="ti-wallet text-primary icon-md mr-2"></i>
+                    <div class="text-left">
+                      <h6 class="mb-0">{{ i18n "entry_fee" | upper }}</h6>
+                      <p class="mb-0">{{ .Params.Fee | markdownify }}</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 text-lg-right text-right">
+              {{ if .Params.Google_url }}
+                <a target="_blank" href="{{ .Params.Google_url | safeURL }}"><img class="img-fluid" style="width: 70px; height: 70px; object-fit: cover;" src="{{ .Site.Params.LogoGoogle | absURL }}" alt="google-calendar"></a>
+              {{ end }}
+              {{ if .Params.Outlook_url }}
+                <a target="_blank" href="{{ .Params.Outlook_url | safeURL }}"><img class="img-fluid" style="width: 44px; height: 44px; object-fit: cover;" src="{{ .Site.Params.LogoOutlook | absURL }}" alt="outlook-calendar"></a>
+              {{ end }}
+              {{ if .Params.Eventbrite_url }}
+                <div class="d-inline-flex align-items-center">
+                  <i class="ti-ticket text-primary icon-md mr-2"></i>
+                  <div class="text-left">
+                    <a target="_blank" href="{{ .Params.Eventbrite_url | safeURL }}">
+                      <h6 class="mb-0">{{ i18n "buy_tickets" | upper }}</h6>
+                    </a>
+                  </div>
+                </div>
+              {{ end }}
+            </div>
+            <!-- border -->
+            <div class="col-12 mt-4 order-4">
+              <div class="border-bottom border-primary"></div>
+            </div>
+          </div>
+          <!-- event details -->
+          <div class="row">
+            <div class="col-12 mb-50 content">
+              {{ .Content }}
+            </div>
+          </div>
+          <!-- event speakers -->
+          <div class="row">
+            <div class="col-12">
+              <h3 class="mb-4">{{ i18n "event_speaker"}}</h3>
+            </div>
+            <!-- speakers -->
+            {{ range .Params.Speaker }}
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+              <div class="media">
+               {{ with .image }}<img class="mr-3 img-fluid" src="{{ . | relURL }}" alt="speaker">{{ end }}
+                <div class="media-body">
+                  <h4 class="mt-0">{{ .name }}</h4>
+                  {{ .designation }}
+                </div>
+              </div>
+            </div>
+            {{ end }}
+            <!-- border -->
+            <div class="col-12 mt-4 order-4">
+              <div class="border-bottom border-primary"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
