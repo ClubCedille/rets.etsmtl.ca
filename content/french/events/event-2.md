@@ -12,6 +12,10 @@ image: "images/events/event-2.jpg"
 location: "Dhanmondi, Dhaka"
 # entry fee
 fee: "À partir de 699$"
+# book url
+#outlook_url: "https://outlook.live.com/calendar/0/deeplink/compose"
+#google_url: "https://www.labnol.org/calendar/"
+eventbrite_url: "https://www.eventbrite.ca/"
 # apply url
 apply_url : "#"
 # event speaker
@@ -37,7 +41,7 @@ speaker:
     designation : "Enseignant"
 
 # type
-type: "event"
+type: "events"
 ---
 
 ### À propos de l’événement
