@@ -68,9 +68,9 @@ preloader = "images/preloader.gif" # use jpg, png, svg or gif format.
 # google map
 [params.map]
 enable = true
-gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
-map_latitude = "51.5223477"
-map_longitude = "-0.1622023"
+gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyC9w8AbEHCIJFhrqh1X_WY0xsXuh0Q46Kg&libraries=places"
+map_latitude = "45.49382"
+map_longitude = "-73.56233"
 map_marker = "images/marker.png" # marker size 37*55 px
 
 # cookies
